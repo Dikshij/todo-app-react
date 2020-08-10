@@ -10,8 +10,12 @@ class Show extends React.Component {
               <h1 key={task.taskId}>
                 {task.value},{task.taskId}
               </h1>
-              <button>Edit</button>
-              <button>Delete</button>
+              <button onClick={() => this.props.setUpEditTodo(task.taskId)}>
+                Edit
+              </button>
+              <button onClick={() => this.props.deleteTodo(task.taskId)}>
+                Delete
+              </button>
             </div>
           );
         })}
